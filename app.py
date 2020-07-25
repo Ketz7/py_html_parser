@@ -29,6 +29,8 @@ for i in y:
     z = i.find('strong')
     if z:
         q = z.get_text()
+        if q == None:
+            q = 'Buyer'
 output["name"] = q
 
 # For Email
