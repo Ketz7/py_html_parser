@@ -1,25 +1,30 @@
 # Imports the requests library.
+# Imports regex library.
+# Imports json library.
+# Imports BeautifulSoup library.
+
 import requests
 import re
 import json
-# Import Beautiful soup library
 from bs4 import BeautifulSoup
 
 '''
 This url is a local path to your html file, 
-replace the url to your specific html file.
+replace the url to your specific html file path.
 '''
 
 url = "D:\Python_notebook\/realtor.html"
 page = open(url)
 
-# This will parse the html into r object
+# This will parse the html into soup object
 soup = BeautifulSoup(page.read(), 'html.parser')
 
 output = {}
 
 # For Name
 y = soup.find_all("font", {'class': "font16"})
+
+# Loop finds the instances strong inside y.
 for i in y:
     z = i.find('strong')
     if z:
@@ -42,5 +47,6 @@ output["Phone"] = temp2[0]
 print(output)
 
 # Runs as a function like a loop, and closes file operation
-with open("output.json", "w") as kekw:
-    json.dump(output, kekw)
+# Creates a json output file.
+with open("output.json", "w") as full:
+    json.dump(output, full)
