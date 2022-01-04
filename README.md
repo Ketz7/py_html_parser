@@ -1,5 +1,3 @@
-![GitHub branch checks state](https://img.shields.io/github/checks-status/Ketz7/py_html_parser/master?logo=GitHub&style=plastic)
-
 # HTML PARSER
 Html Parser
 Python script which extracts the required information from an Html file and presents it as an output json file.
