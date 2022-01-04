@@ -11,7 +11,7 @@ Python 3.5 or higher
 ### Installing
 Install BeautifulSoup using pip
 
-```
+```python
 pip install bs4
 ```
 
@@ -19,6 +19,6 @@ pip install bs4
 
 Run the script using the following command 
 
-```
+```python
 python app.py
 ```
